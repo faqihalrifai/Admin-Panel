@@ -499,11 +499,20 @@ body {
     cursor: pointer;
     transition: all 0.2s ease;
     box-shadow: var(--shadow);
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding: 0;
+    /* -webkit-appearance: none; */
+    /* -moz-appearance: none; */
+    /* appearance: none; */
+    padding: 0; 
     background-color: transparent;
+}
+input[type="color"].color-dot {
+    padding: 0; 
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    cursor: pointer;
+    background-color: var(--card-background); 
 }
 input[type="color"].color-dot::-webkit-color-swatch-wrapper {
     padding: 0;
