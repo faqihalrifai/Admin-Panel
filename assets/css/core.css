@@ -1896,13 +1896,15 @@ input:checked + .slider:before {
         top: calc(100% + 5px);
         min-width: 280px;
         right: 15px; 
+        left: unset;
     }
 
     .notifications-menu,
     .messages-menu {
+        left: 50%; 
+        transform: translateX(-50%); 
         right: auto; 
-        left: 15px; 
-        min-width: 280px; 
+        min-width: 280px;
         max-width: calc(100% - 30px); 
     }
 
@@ -2036,9 +2038,11 @@ input:checked + .slider:before {
 
     .notifications-menu,
     .messages-menu {
-        right: auto; /* Pastikan ini tetap di-override */
-        left: 10px; /* Posisikan dari kiri dengan margin 10px */
-        max-width: calc(100% - 20px); /* Pastikan tidak melebihi lebar layar dengan margin */
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto; 
+        min-width: 240px; 
+        max-width: calc(100% - 20px); 
     }
     /* Adjust full list notification/message item padding */
     .notification-item-full,
