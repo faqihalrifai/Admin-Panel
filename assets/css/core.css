@@ -311,7 +311,7 @@ body {
     display: none;
     position: absolute;
     top: calc(100% + 10px);
-    right: 0;
+    right: 0; 
     background-color: var(--card-background);
     min-width: 250px;
     box-shadow: var(--shadow-lg);
@@ -321,6 +321,7 @@ body {
     overflow: hidden;
     border: 1px solid var(--border-color);
     color: var(--text-color);
+    
 }
 
 .dropdown-menu.show {
@@ -1894,14 +1895,15 @@ input:checked + .slider:before {
     .dropdown-menu {
         top: calc(100% + 5px);
         min-width: 280px;
-        left: unset;
-        right: 15px;
+        right: 15px; 
     }
 
     .notifications-menu,
     .messages-menu {
-        right: 15px;
-        left: auto;
+        right: auto; 
+        left: 15px; 
+        min-width: 280px; 
+        max-width: calc(100% - 30px); 
     }
 
     /* Adjust profile dropdown specifically */
@@ -2027,10 +2029,17 @@ input:checked + .slider:before {
     .language-menu,
     .theme-menu,
     .profile-menu {
-        min-width: 240px; /* Smaller minimum width for very small screens */
-        right: 10px; /* Adjust right edge for safety */
+        min-width: 240px; 
+        right: 10px; 
+        left: auto; 
     }
 
+    .notifications-menu,
+    .messages-menu {
+        right: auto; /* Pastikan ini tetap di-override */
+        left: 10px; /* Posisikan dari kiri dengan margin 10px */
+        max-width: calc(100% - 20px); /* Pastikan tidak melebihi lebar layar dengan margin */
+    }
     /* Adjust full list notification/message item padding */
     .notification-item-full,
     .message-item-full {
