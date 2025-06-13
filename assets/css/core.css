@@ -5,7 +5,6 @@
  * This file contains global styles, responsive adjustments,
  * and theme-related CSS variables.
  *
- * Author: Your Name/Company Name 
  * Version: 1.0.0
  *
  */
@@ -89,7 +88,7 @@ body {
     padding: 20px;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Keep flex-start for logo & text */
+    justify-content: flex-start; /* Tetap flex-start untuk logo & teks */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     height: var(--header-height);
 }
@@ -1100,7 +1099,7 @@ tr:last-child td {
 
 /* Modal Styles */
 .modal {
-    display: none;
+    display: none; 
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -1109,8 +1108,8 @@ tr:last-child td {
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.8);
-    justify-content: center;
-    align-items: center;
+    justify-content: center; 
+    align-items: center;     
     animation: fadeInBackground 0.3s forwards;
 }
 
@@ -1121,7 +1120,7 @@ tr:last-child td {
     border-radius: var(--radius);
     box-shadow: var(--shadow-lg);
     width: 90%;
-    max-width: 650px;
+    max-width: 650px; 
     position: relative;
     animation: zoomIn 0.3s ease-out forwards;
     color: var(--text-color);
@@ -1895,29 +1894,20 @@ input:checked + .slider:before {
     .dropdown-menu {
         top: calc(100% + 5px);
         min-width: 280px;
-        /* Hapus atau ubah 'right: 15px;' untuk centering */
-        /* right: 15px; */ /* dihapus */
-        left: 50%; /* Tambahkan ini */
-        transform: translateX(-50%); /* Tambahkan ini untuk centering */
-        right: auto; /* Pastikan right auto agar tidak mengganggu transform */
+        left: unset;
+        right: 15px;
     }
 
-    /* Penyesuaian khusus untuk notifikasi dan pesan di tengah */
     .notifications-menu,
     .messages-menu {
-        /* right: 15px; */ /* dihapus karena akan di-override oleh aturan di atas */
-        /* left: auto; */ /* dihapus */
-        left: 50%; /* Mengoverride dengan nilai tengah */
-        transform: translateX(-50%); /* Memastikan di tengah */
-        min-width: calc(100% - 30px); /* Maksimal selebar layar dengan padding 15px di kiri/kanan */
-        max-width: 350px; /* Batasi lebar maksimum agar tidak terlalu besar di tablet */
+        right: 15px;
+        left: auto;
     }
 
     /* Adjust profile dropdown specifically */
     .profile-menu {
         right: 15px;
         left: auto;
-        transform: none; /* Pastikan tidak ada transform yang mengganggu dari aturan .dropdown-menu umum */
     }
 }
 
@@ -2038,10 +2028,7 @@ input:checked + .slider:before {
     .theme-menu,
     .profile-menu {
         min-width: 240px; /* Smaller minimum width for very small screens */
-        /* right: 10px; */ /* dihapus */
-        left: 50%; /* Mengoverride dengan nilai tengah */
-        transform: translateX(-50%); /* Memastikan di tengah */
-        right: auto; /* Pastikan right auto agar tidak mengganggu transform */
+        right: 10px; /* Adjust right edge for safety */
     }
 
     /* Adjust full list notification/message item padding */
