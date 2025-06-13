@@ -51,7 +51,7 @@ function showToast(message, type = 'success') {
         } else if (type === 'warning') {
             iconClass = 'fa-exclamation-triangle';
         }
-
+        
         let toastIcon = toastNotification.querySelector('i.fas');
         let toastSpan = toastNotification.querySelector('span');
 
@@ -67,15 +67,15 @@ function showToast(message, type = 'success') {
         }
 
         toastIcon.className = `fas ${iconClass}`; // Update icon class
-        toastSpan.textContent = message; // Update message text
+        toastSpan.textContent = message;  // Update message text
 
         toastNotification.classList.remove('success', 'error', 'info', 'warning');
         toastNotification.classList.add(type);
         toastNotification.classList.add('show');
-
+        
         setTimeout(() => {
             toastNotification.classList.remove('show');
-        }, 3000);
+        }, 3000); 
     }
 }
 
@@ -137,7 +137,7 @@ const translations = {
         'messageViewDetails': 'View Details',
         'modalComposeMessage': 'Compose Message',
         'noNotifications': 'No new notifications.', // Added for clear all notifications scenario
-
+        
         // Header Dropdowns (Existing, reordered for clarity)
         'profileMyProfile': 'My Profile',
         'profileAccountSettings': 'Account Settings',
@@ -172,15 +172,15 @@ const translations = {
         'tableHeaderAmount': 'Amount',
         'tableHeaderStatus': 'Status',
         'tableHeaderActions': 'Actions',
-
+        
         // Status Labels (Used across various tables/cards)
         'statusCompleted': 'Completed',
         'statusPending': 'Pending',
         'statusProcessing': 'Processing',
-        'statusActive': 'Active',
-        'statusInactive': 'Inactive',
-        'statusLowStock': 'Low Stock',
-
+        'statusActive': 'Active', 
+        'statusInactive': 'Inactive', 
+        'statusLowStock': 'Low Stock', 
+        
         // Dashboard Modals
         'modalOrdersTitle': 'Total Orders Details',
         'modalTotal': 'Total:',
@@ -226,7 +226,7 @@ const translations = {
         'modalConfirmDeletionTitle': 'Confirm Deletion',
         'modalDeleteOrderConfirm': 'Are you sure you want to delete order',
         'modalDelete': 'Delete',
-
+        
         // Help Page Cards
         'cardDocumentationTitle': 'Documentation',
         'cardDocumentationText': 'Access detailed guides',
@@ -255,7 +255,7 @@ const translations = {
         'faqA5': 'Primary color customization can be done via the theme settings icon in the header. For advanced customization, direct modification of CSS variables in the `style.css` file is recommended.',
         'faqQ6': 'How do I integrate with third-party services?',
         'faqA6': 'Integrations with services like Google Analytics or Mailchimp can be managed from the \'Settings\' page under the \'Integrations\' tab. You will typically need to provide API keys or tracking IDs from the respective service.',
-
+        
         // Help Page Modals
         'modalDocTitle': 'Documentation Details',
         'modalDocText1': 'Access our comprehensive documentation portal for step-by-step guides, feature explanations, and troubleshooting tips.',
@@ -419,233 +419,233 @@ const translations = {
         'modalRefundedOrdersInfo': 'Review refund cases to address product quality and customer experience issues.',
 
         // Users Page
-        'usersUserList': 'User List',
-        'usersAddUser': 'Add User',
-        'searchUsersPlaceholder': 'Search users...',
-        'usersTableHeaderUserID': 'User ID',
-        'usersTableHeaderName': 'Name',
-        'usersTableHeaderEmail': 'Email',
-        'usersTableHeaderRole': 'Role',
-        'usersTableHeaderStatus': 'Status',
-        'usersTableHeaderRegisteredDate': 'Registered Date',
-        'roleAdmin': 'Admin',
-        'roleEditor': 'Editor',
-        'roleCustomer': 'Customer',
-        'usersNewUsersThisMonth': 'New Users This Month',
-        'usersAdminUsers': 'Admin Users',
-        'usersInactiveUsers': 'Inactive Users',
-        'usersActiveUsers': 'Active Users',
-        'usersSubscribedUsers': 'Subscribed Users',
-        'usersPendingVerification': 'Users with Pending Verification',
-        'modalNewUsersTitle': 'New Users This Month Details',
-        'modalUsers': 'users',
-        'modalAvgDailySignups': 'Avg. daily signups:',
-        'modalGrowthLastMonth': 'Growth from last month:',
-        'modalNewUsersInfo': 'Monitor new user acquisition trends and sources.',
-        'modalAdminUsersTitle': 'Admin Users Details',
-        'modalAdministrators': 'administrators',
-        'modalSuperAdmin': 'Super Admin',
-        'modalContentAdmin': 'Content Admin',
-        'modalOrderManager': 'Order Manager',
-        'modalLastActivity': 'Last activity:',
-        'modalToday': 'Today',
-        'modalAdminUsersInfo': 'Manage administrative access and permissions.',
-        'modalInactiveUsersTitle': 'Inactive Users Details',
-        'modalLastLoginOver30Days': 'Last login over 30 days:',
-        'modalPotentialReasons': 'Potential reasons:',
-        'modalAccountDormant': 'Account dormant',
-        'modalUnsubscribed': 'Unsubscribed',
-        'modalInactiveUsersInfo': 'Identify inactive users for re-engagement campaigns or account cleanup.',
-        'modalActiveUsersTitle': 'Active Users Details',
-        'modalDailyActiveUsers': 'Daily Active Users (DAU):',
-        'modalMonthlyActiveUsers': 'Monthly Active Users (MAU):',
-        'modalActiveUsersInfo': 'Track user engagement and overall platform health.',
-        'modalSubscribedUsersTitle': 'Subscribed Users Details',
-        'modalSubscriptionType': 'Subscription type:',
-        'modalEmailNewsletter': 'Email Newsletter',
-        'modalConversionToCustomer': 'Conversion to customer:',
-        'modalSubscribedUsersInfo': 'Manage your subscriber list for marketing and communication.',
-        'modalPendingVerificationTitle': 'Users with Pending Verification Details',
-        'modalVerificationType': 'Verification type:',
-        'modalPhone': 'Phone',
-        'modalEmail': 'Email',
-        'modalActionNeeded': 'Action needed:',
-        'modalSendReminder': 'Send reminder',
-        'modalManualReview': 'Manual review',
-        'modalPendingVerificationInfo': 'Address unverified accounts to ensure data integrity and security.',
-        'modalUserDetailsTitle': 'User Details',
-        'modalRegisteredDate': 'Registered Date:',
-        'modalEditUserTitle': 'Edit User',
-        'modalDeleteUserConfirm': 'Are you sure you want to delete user',
-
+        'usersUserList': 'User List', 
+        'usersAddUser': 'Add User', 
+        'searchUsersPlaceholder': 'Search users...', 
+        'usersTableHeaderUserID': 'User ID', 
+        'usersTableHeaderName': 'Name', 
+        'usersTableHeaderEmail': 'Email', 
+        'usersTableHeaderRole': 'Role', 
+        'usersTableHeaderStatus': 'Status', 
+        'usersTableHeaderRegisteredDate': 'Registered Date', 
+        'roleAdmin': 'Admin', 
+        'roleEditor': 'Editor', 
+        'roleCustomer': 'Customer', 
+        'usersNewUsersThisMonth': 'New Users This Month', 
+        'usersAdminUsers': 'Admin Users', 
+        'usersInactiveUsers': 'Inactive Users', 
+        'usersActiveUsers': 'Active Users', 
+        'usersSubscribedUsers': 'Subscribed Users', 
+        'usersPendingVerification': 'Users with Pending Verification', 
+        'modalNewUsersTitle': 'New Users This Month Details', 
+        'modalUsers': 'users', 
+        'modalAvgDailySignups': 'Avg. daily signups:', 
+        'modalGrowthLastMonth': 'Growth from last month:', 
+        'modalNewUsersInfo': 'Monitor new user acquisition trends and sources.', 
+        'modalAdminUsersTitle': 'Admin Users Details', 
+        'modalAdministrators': 'administrators', 
+        'modalSuperAdmin': 'Super Admin', 
+        'modalContentAdmin': 'Content Admin', 
+        'modalOrderManager': 'Order Manager', 
+        'modalLastActivity': 'Last activity:', 
+        'modalToday': 'Today', 
+        'modalAdminUsersInfo': 'Manage administrative access and permissions.', 
+        'modalInactiveUsersTitle': 'Inactive Users Details', 
+        'modalLastLoginOver30Days': 'Last login over 30 days:', 
+        'modalPotentialReasons': 'Potential reasons:', 
+        'modalAccountDormant': 'Account dormant', 
+        'modalUnsubscribed': 'Unsubscribed', 
+        'modalInactiveUsersInfo': 'Identify inactive users for re-engagement campaigns or account cleanup.', 
+        'modalActiveUsersTitle': 'Active Users Details', 
+        'modalDailyActiveUsers': 'Daily Active Users (DAU):', 
+        'modalMonthlyActiveUsers': 'Monthly Active Users (MAU):', 
+        'modalActiveUsersInfo': 'Track user engagement and overall platform health.', 
+        'modalSubscribedUsersTitle': 'Subscribed Users Details', 
+        'modalSubscriptionType': 'Subscription type:', 
+        'modalEmailNewsletter': 'Email Newsletter', 
+        'modalConversionToCustomer': 'Conversion to customer:', 
+        'modalSubscribedUsersInfo': 'Manage your subscriber list for marketing and communication.', 
+        'modalPendingVerificationTitle': 'Users with Pending Verification Details', 
+        'modalVerificationType': 'Verification type:', 
+        'modalPhone': 'Phone', 
+        'modalEmail': 'Email', 
+        'modalActionNeeded': 'Action needed:', 
+        'modalSendReminder': 'Send reminder', 
+        'modalManualReview': 'Manual review', 
+        'modalPendingVerificationInfo': 'Address unverified accounts to ensure data integrity and security.', 
+        'modalUserDetailsTitle': 'User Details', 
+        'modalRegisteredDate': 'Registered Date:', 
+        'modalEditUserTitle': 'Edit User', 
+        'modalDeleteUserConfirm': 'Are you sure you want to delete user', 
+        
         // Products Page
-        'productsProductList': 'Product List',
-        'productsAddProduct': 'Add Product',
-        'searchProductsPlaceholder': 'Search products...',
-        'productsTableHeaderProductID': 'Product ID',
-        'productsTableHeaderName': 'Name',
-        'productsTableHeaderCategory': 'Category',
-        'productsTableHeaderPrice': 'Price',
-        'productsTableHeaderStock': 'Stock',
-        'productsTableHeaderStatus': 'Status',
-        'productsTotalProducts': 'Total Products',
-        'productsActiveProducts': 'Active Products',
-        'productsInactiveProducts': 'Inactive Products',
-        'productsTotalSales': 'Total Sales',
-        'productsAverageRating': 'Average Rating',
-        'productsLowStockProducts': 'Low Stock Products',
-        'productsProductImages': 'Product Images',
-        'categoryElectronics': 'Electronics',
-        'categoryFashion': 'Fashion',
-        'categoryHomeGoods': 'Home Goods',
-        'categoryBooks': 'Books',
-        'categorySportsOutdoors': 'Sports & Outdoors',
-        'modalTotalProductsTitle': 'Total Products Details',
-        'modalNewProductsThisMonth': 'New products this month:',
-        'modalTotalProductsInfo': 'Manage your entire product catalog.',
-        'modalActiveProductsTitle': 'Active Products Details',
-        'modalTopSellingCategories': 'Top selling categories:',
-        'modalAverageConversionRate': 'Average conversion rate:',
-        'modalActiveProductsInfo': 'Monitor the performance of your active products.',
-        'modalInactiveProductsTitle': 'Inactive Products Details',
-        'modalOutOfStock': 'Out of stock',
-        'modalDiscontinued': 'Discontinued',
-        'modalLastUpdated': 'Last updated:',
-        'modalWeeksAgo': 'weeks ago',
-        'modalInactiveProductsInfo': 'Identify inactive products for potential updates or removal.',
-        'modalTotalSalesTitle': 'Total Sales Details',
-        'modalTotalRevenue': 'Total revenue:',
-        'modalTopSellingProduct': 'Top selling product:',
-        'modalAverageOrderValue': 'Average order value:',
-        'modalTotalSalesInfo': 'Track your overall product sales and performance.',
-        'modalAverageRatingTitle': 'Average Rating Details',
-        'modalAverageRating': 'Average rating:',
-        'modalStars': 'stars',
-        'modalTotalReviews': 'Total reviews:',
-        'modalMostReviewedProduct': 'Most reviewed product:',
-        'modalAverageRatingInfo': 'Monitor customer satisfaction with your products.',
-        'modalLowStockProductsTitle': 'Low Stock Products Details',
-        'modalExampleProducts': 'Example products:',
-        'modalRestock': 'Restock',
-        'modalNotifySupplier': 'Notify supplier',
-        'modalLowStockProductsInfo': 'Ensure you don\'t run out of popular products.',
+        'productsProductList': 'Product List', 
+        'productsAddProduct': 'Add Product', 
+        'searchProductsPlaceholder': 'Search products...', 
+        'productsTableHeaderProductID': 'Product ID', 
+        'productsTableHeaderName': 'Name', 
+        'productsTableHeaderCategory': 'Category', 
+        'productsTableHeaderPrice': 'Price', 
+        'productsTableHeaderStock': 'Stock', 
+        'productsTableHeaderStatus': 'Status', 
+        'productsTotalProducts': 'Total Products', 
+        'productsActiveProducts': 'Active Products', 
+        'productsInactiveProducts': 'Inactive Products', 
+        'productsTotalSales': 'Total Sales', 
+        'productsAverageRating': 'Average Rating', 
+        'productsLowStockProducts': 'Low Stock Products', 
+        'productsProductImages': 'Product Images', 
+        'categoryElectronics': 'Electronics', 
+        'categoryFashion': 'Fashion', 
+        'categoryHomeGoods': 'Home Goods', 
+        'categoryBooks': 'Books', 
+        'categorySportsOutdoors': 'Sports & Outdoors', 
+        'modalTotalProductsTitle': 'Total Products Details', 
+        'modalNewProductsThisMonth': 'New products this month:', 
+        'modalTotalProductsInfo': 'Manage your entire product catalog.', 
+        'modalActiveProductsTitle': 'Active Products Details', 
+        'modalTopSellingCategories': 'Top selling categories:', 
+        'modalAverageConversionRate': 'Average conversion rate:', 
+        'modalActiveProductsInfo': 'Monitor the performance of your active products.', 
+        'modalInactiveProductsTitle': 'Inactive Products Details', 
+        'modalOutOfStock': 'Out of stock', 
+        'modalDiscontinued': 'Discontinued', 
+        'modalLastUpdated': 'Last updated:', 
+        'modalWeeksAgo': 'weeks ago', 
+        'modalInactiveProductsInfo': 'Identify inactive products for potential updates or removal.', 
+        'modalTotalSalesTitle': 'Total Sales Details', 
+        'modalTotalRevenue': 'Total revenue:', 
+        'modalTopSellingProduct': 'Top selling product:', 
+        'modalAverageOrderValue': 'Average order value:', 
+        'modalTotalSalesInfo': 'Track your overall product sales and performance.', 
+        'modalAverageRatingTitle': 'Average Rating Details', 
+        'modalAverageRating': 'Average rating:', 
+        'modalStars': 'stars', 
+        'modalTotalReviews': 'Total reviews:', 
+        'modalMostReviewedProduct': 'Most reviewed product:', 
+        'modalAverageRatingInfo': 'Monitor customer satisfaction with your products.', 
+        'modalLowStockProductsTitle': 'Low Stock Products Details', 
+        'modalExampleProducts': 'Example products:', 
+        'modalRestock': 'Restock', 
+        'modalNotifySupplier': 'Notify supplier', 
+        'modalLowStockProductsInfo': 'Ensure you don\'t run out of popular products.', 
         'noImagesAvailable': 'No images available for this product.',
 
         // Categories Page
-        'categoriesProductCategories': 'Product Categories',
-        'categoriesAddCategory': 'Add Category',
-        'searchCategoriesPlaceholder': 'Search categories...',
-        'categoriesTableHeaderCategoryID': 'Category ID',
-        'categoriesTableHeaderName': 'Name',
-        'categoriesTableHeaderTotalProducts': 'Total Products',
-        'categoriesTableHeaderLastUpdated': 'Last Updated',
-        'categoriesShowDescription': 'Show Description',
-        'categoriesHideDescription': 'Hide Description',
-        'catDescElectronics': 'This category includes a wide range of electronic devices such as laptops, smartphones, cameras, and audio equipment. It is one of our best-selling categories with high customer engagement.',
-        'catDescApparel': 'Our apparel collection features modern and stylish clothing for all genders and ages. From casual wear to formal attire, we offer diverse options for every season.',
-        'catDescBooks': 'A vast library of books covering various genres including fiction, non-fiction, educational, and children\'s literature. New titles are added weekly.',
-        'catDescHomeKitchen': 'Everything you need for a comfortable home and functional kitchen, including appliances, decor, cookware, and storage solutions.',
-        'catDescSportsOutdoors': 'Gear and equipment for various sports activities and outdoor adventures, from camping and hiking to fitness and team sports.',
-        'categoriesTotalCategories': 'Total Categories',
-        'categoriesNewCategoriesThisMonth': 'New Categories This Month',
-        'categoriesTopCategories': 'Top Categories',
-        'categoriesTrendingCategories': 'Trending Categories',
-        'categoriesTrendingCategoriesValue': 'Electronics, Apparel',
-        'categoriesCategorizedProducts': 'Categorized Products',
-        'categoriesNeedingReview': 'Categories Needing Review',
-        'modalTotalCategoriesTitle': 'Total Categories Details',
-        'modalCategories': 'categories',
-        'modalMainCategories': 'Main Categories:',
-        'modalLastAdded': 'Last added:',
-        'modalTools': 'Tools',
-        'modalJune': 'June',
-        'modalTotalCategoriesInfo': 'Overview of all product categories in the system.',
-        'modalNewCategoriesTitle': 'New Categories This Month Details',
-        'modalNewCategories': 'new categories',
-        'modalRecentlyAdded': 'Recently added:',
-        'modalGarden': 'Garden',
-        'modalPetSupplies': 'Pet Supplies',
-        'modalImpact': 'Impact:',
-        'modalIncreasedProductVariety': 'Increased product variety by',
-        'modalNewCategoriesInfo': 'Track recent category additions and their impact.',
-        'modalTopCategoriesTitle': 'Top Categories Details',
-        'modalTop5': 'Top 5:',
-        'modalRevenueContribution': 'Revenue contribution:',
-        'modalGrowthRate': 'Growth Rate:',
-        'modalTopCategoriesInfo': 'Insights into your best-performing product categories.',
-        'modalTrendingCategoriesTitle': 'Trending Categories Details',
-        'modalCurrentlyTrending': 'Currently trending:',
-        'modalDueToNewLaunches': 'due to new product launches',
-        'modalSearchVolumeIncrease': 'Search volume increase:',
-        'modalTrendingCategoriesInfo': 'Identify categories with increasing customer interest.',
-        'modalCategorizedProductsTitle': 'Categorized Products Details',
-        'modalOfProductsAreCategorized': 'of products are categorized',
-        'modalUncategorized': 'Uncategorized:',
-        'modalCategorizeRemaining': 'Categorize remaining products for better discoverability.',
-        'modalCategorizedProductsInfo': 'Ensure all products are correctly categorized for easy navigation.',
-        'modalCategoriesReviewTitle': 'Categories Needing Review Details',
-        'modalReasons': 'Reasons:',
-        'modalOldElectronics': 'Old Electronics',
-        'modalNicheBooks': 'Niche Books',
-        'modalOutdatedProducts': 'Outdated products',
-        'modalLowSalesVolume': 'Low sales volume',
-        'modalCategoriesReviewInfo': 'Periodically review categories to keep your catalog relevant and optimized.',
-        'modalCategoryDetailsTitle': 'Category Details',
-        'modalDescription': 'Description:',
-        'modalEditCategoryTitle': 'Edit Category',
-        'modalCategoryName': 'Category Name',
-        'modalDeleteCategoryConfirm': 'Are you sure you want to delete category',
+        'categoriesProductCategories': 'Product Categories', 
+        'categoriesAddCategory': 'Add Category', 
+        'searchCategoriesPlaceholder': 'Search categories...', 
+        'categoriesTableHeaderCategoryID': 'Category ID', 
+        'categoriesTableHeaderName': 'Name', 
+        'categoriesTableHeaderTotalProducts': 'Total Products', 
+        'categoriesTableHeaderLastUpdated': 'Last Updated', 
+        'categoriesShowDescription': 'Show Description', 
+        'categoriesHideDescription': 'Hide Description', 
+        'catDescElectronics': 'This category includes a wide range of electronic devices such as laptops, smartphones, cameras, and audio equipment. It is one of our best-selling categories with high customer engagement.', 
+        'catDescApparel': 'Our apparel collection features modern and stylish clothing for all genders and ages. From casual wear to formal attire, we offer diverse options for every season.', 
+        'catDescBooks': 'A vast library of books covering various genres including fiction, non-fiction, educational, and children\'s literature. New titles are added weekly.', 
+        'catDescHomeKitchen': 'Everything you need for a comfortable home and functional kitchen, including appliances, decor, cookware, and storage solutions.', 
+        'catDescSportsOutdoors': 'Gear and equipment for various sports activities and outdoor adventures, from camping and hiking to fitness and team sports.', 
+        'categoriesTotalCategories': 'Total Categories', 
+        'categoriesNewCategoriesThisMonth': 'New Categories This Month', 
+        'categoriesTopCategories': 'Top Categories', 
+        'categoriesTrendingCategories': 'Trending Categories', 
+        'categoriesTrendingCategoriesValue': 'Electronics, Apparel', 
+        'categoriesCategorizedProducts': 'Categorized Products', 
+        'categoriesNeedingReview': 'Categories Needing Review', 
+        'modalTotalCategoriesTitle': 'Total Categories Details', 
+        'modalCategories': 'categories', 
+        'modalMainCategories': 'Main Categories:', 
+        'modalLastAdded': 'Last added:', 
+        'modalTools': 'Tools', 
+        'modalJune': 'June', 
+        'modalTotalCategoriesInfo': 'Overview of all product categories in the system.', 
+        'modalNewCategoriesTitle': 'New Categories This Month Details', 
+        'modalNewCategories': 'new categories', 
+        'modalRecentlyAdded': 'Recently added:', 
+        'modalGarden': 'Garden', 
+        'modalPetSupplies': 'Pet Supplies', 
+        'modalImpact': 'Dampak:', 
+        'modalIncreasedProductVariety': 'Meningkatkan variasi produk sebesar', 
+        'modalNewCategoriesInfo': 'Track recent category additions and their impact.', 
+        'modalTopCategoriesTitle': 'Top Categories Details', 
+        'modalTop5': 'Top 5:', 
+        'modalRevenueContribution': 'Revenue contribution:', 
+        'modalGrowthRate': 'Growth Rate:', 
+        'modalTopCategoriesInfo': 'Insights into your best-performing product categories.', 
+        'modalTrendingCategoriesTitle': 'Trending Categories Details', 
+        'modalCurrentlyTrending': 'Currently trending:', 
+        'modalDueToNewLaunches': 'due to new product launches', 
+        'modalSearchVolumeIncrease': 'Search volume increase:', 
+        'modalTrendingCategoriesInfo': 'Identify categories with increasing customer interest.', 
+        'modalCategorizedProductsTitle': 'Categorized Products Details', 
+        'modalOfProductsAreCategorized': 'of products are categorized', 
+        'modalUncategorized': 'Uncategorized:', 
+        'modalCategorizeRemaining': 'Categorize remaining products for better discoverability.', 
+        'modalCategorizedProductsInfo': 'Ensure all products are correctly categorized for easy navigation.', 
+        'modalCategoriesReviewTitle': 'Categories Needing Review Details', 
+        'modalReasons': 'Reasons:', 
+        'modalOldElectronics': 'Old Electronics', 
+        'modalNicheBooks': 'Niche Books', 
+        'modalOutdatedProducts': 'Outdated products', 
+        'modalLowSalesVolume': 'Low sales volume', 
+        'modalCategoriesReviewInfo': 'Periodically review categories to keep your catalog relevant and optimized.', 
+        'modalCategoryDetailsTitle': 'Category Details', 
+        'modalDescription': 'Description:', 
+        'modalEditCategoryTitle': 'Edit Category', 
+        'modalCategoryName': 'Category Name', 
+        'modalDeleteCategoryConfirm': 'Are you sure you want to delete category', 
 
         // Settings Page
-        'settingsGeneral': 'General',
-        'settingsSecurity': 'Security',
-        'settingsNotifications': 'Notifications',
-        'settingsIntegrations': 'Integrations',
-        'settingsGeneralAppSettings': 'General Application Settings',
-        'settingsSiteName': 'Site Name',
-        'settingsSiteNameValue': 'DashPro Dashboard',
-        'settingsTimezone': 'Timezone',
-        'timezoneJakarta': 'Asia/Jakarta',
-        'timezoneLondon': 'Europe/London',
-        'timezoneNewYork': 'America/New_York',
-        'timezoneUTC': 'UTC',
-        'settingsDefaultCurrency': 'Default Currency',
-        'settingsDefaultLanguage': 'Default Language',
-        'languageEnglish': 'English',
-        'languageIndonesian': 'Bahasa Indonesia',
-        'languageSpanish': 'Español',
-        'settingsMaintenanceMode': 'Maintenance Mode',
-        'settingsSaveGeneral': 'Save General Settings',
-        'settingsAccountSecurity': 'Account Security Settings',
-        'settingsPasswordPolicy': 'Password Policy',
-        'policyStrong': 'Strong (min 8 chars, 1 uppercase, 1 number, 1 symbol)',
-        'policyMedium': 'Medium (min 6 chars, 1 number)',
-        'policyWeak': 'Weak (min 4 chars)',
-        'settingsTwoFactorAuth': 'Two-Factor Authentication (2FA)',
-        'settingsSessionTimeout': 'Session Timeout (minutes)',
-        'settingsIPWhitelist': 'IP Whitelist (comma-separated, optional)',
-        'settingsIPWhitelistPlaceholder': 'e.g., 192.168.1.1, 10.0.0.5',
-        'settingsIPWhitelistHint': 'Only allow access from specified IP addresses.',
-        'settingsSaveSecurity': 'Save Security Settings',
-        'settingsNotificationPreferences': 'Notification Preferences',
-        'settingsEmailNotifications': 'Email Notifications',
-        'settingsEmailNotificationsHint': 'Receive important updates via email.',
-        'settingsSMSNotifications': 'SMS Notifications',
-        'settingsSMSNotificationsHint': 'Receive critical alerts on your mobile phone.',
-        'settingsPushNotifications': 'Push Notifications (in-app)',
-        'settingsPushNotificationsHint': 'Get real-time updates directly in the dashboard.',
-        'settingsSaveNotifications': 'Save Notification Settings',
-        'settingsThirdPartyIntegrations': 'Third-Party Integrations',
-        'settingsGoogleAnalytics': 'Google Analytics',
-        'settingsGoogleAnalyticsText': 'Connect your Google Analytics account to track website traffic.',
-        'settingsTrackingID': 'Tracking ID (GA4)',
-        'settingsEnableDisableGA': 'Enable/Disable Google Analytics integration.',
-        'settingsMailchimp': 'Mailchimp',
-        'settingsMailchimpText': 'Sync your customer data with Mailchimp for email marketing campaigns.',
-        'settingsAPIKey': 'API Key',
-        'settingsEnableDisableMailchimp': 'Enable/Disable Mailchimp integration.',
-        'settingsSaveIntegrations': 'Save Integrations',
-        'toastSettingsSaved': 'Settings saved successfully!',
+        'settingsGeneral': 'General', 
+        'settingsSecurity': 'Security', 
+        'settingsNotifications': 'Notifications', 
+        'settingsIntegrations': 'Integrations', 
+        'settingsGeneralAppSettings': 'General Application Settings', 
+        'settingsSiteName': 'Site Name', 
+        'settingsSiteNameValue': 'DashPro Dashboard', 
+        'settingsTimezone': 'Timezone', 
+        'timezoneJakarta': 'Asia/Jakarta', 
+        'timezoneLondon': 'Europe/London', 
+        'timezoneNewYork': 'America/New_York', 
+        'timezoneUTC': 'UTC', 
+        'settingsDefaultCurrency': 'Default Currency', 
+        'settingsDefaultLanguage': 'Default Language', 
+        'languageEnglish': 'English', 
+        'languageIndonesian': 'Bahasa Indonesia', 
+        'languageSpanish': 'Español', 
+        'settingsMaintenanceMode': 'Maintenance Mode', 
+        'settingsSaveGeneral': 'Save General Settings', 
+        'settingsAccountSecurity': 'Account Security Settings', 
+        'settingsPasswordPolicy': 'Password Policy', 
+        'policyStrong': 'Strong (min 8 chars, 1 uppercase, 1 number, 1 symbol)', 
+        'policyMedium': 'Medium (min 6 chars, 1 number)', 
+        'policyWeak': 'Weak (min 4 chars)', 
+        'settingsTwoFactorAuth': 'Two-Factor Authentication (2FA)', 
+        'settingsSessionTimeout': 'Session Timeout (minutes)', 
+        'settingsIPWhitelist': 'IP Whitelist (comma-separated, optional)', 
+        'settingsIPWhitelistPlaceholder': 'e.g., 192.168.1.1, 10.0.0.5', 
+        'settingsIPWhitelistHint': 'Only allow access from specified IP addresses.', 
+        'settingsSaveSecurity': 'Save Security Settings', 
+        'settingsNotificationPreferences': 'Notification Preferences', 
+        'settingsEmailNotifications': 'Email Notifications', 
+        'settingsEmailNotificationsHint': 'Receive important updates via email.', 
+        'settingsSMSNotifications': 'SMS Notifications', 
+        'settingsSMSNotificationsHint': 'Receive critical alerts on your mobile phone.', 
+        'settingsPushNotifications': 'Push Notifications (in-app)', 
+        'settingsPushNotificationsHint': 'Get real-time updates directly in the dashboard.', 
+        'settingsSaveNotifications': 'Save Notification Settings', 
+        'settingsThirdPartyIntegrations': 'Third-Party Integrations', 
+        'settingsGoogleAnalytics': 'Google Analytics', 
+        'settingsGoogleAnalyticsText': 'Connect your Google Analytics account to track website traffic.', 
+        'settingsTrackingID': 'Tracking ID (GA4)', 
+        'settingsEnableDisableGA': 'Enable/Disable Google Analytics integration.', 
+        'settingsMailchimp': 'Mailchimp', 
+        'settingsMailchimpText': 'Sync your customer data with Mailchimp for email marketing campaigns.', 
+        'settingsAPIKey': 'API Key', 
+        'settingsEnableDisableMailchimp': 'Enable/Disable Mailchimp integration.', 
+        'settingsSaveIntegrations': 'Save Integrations', 
+        'toastSettingsSaved': 'Settings saved successfully!', 
 
         // Footer
         'footerText': '2023 DashPro. All rights reserved.'
@@ -658,12 +658,12 @@ const translations = {
         'decrease': 'penurunan',
         'detailsBtn': 'Detail',
         'modalClose': 'Tutup',
-        'change': 'perubahan', // Untuk perubahan 0% dalam tren
-        'highGrowth': 'Pertumbuhan Tinggi', // Baru untuk kategori
-        'modalEditProfile': 'Edit Profil', // Tombol modal profil umum
-        'modalGoToLogin': 'Ke Halaman Login', // Tombol modal login/registrasi umum
-        'modalSwitch': 'Ganti', // Tombol modal ganti akun umum
-        'modalCancel': 'Batal', // Tombol batal umum
+        'change': 'perubahan', // For 0% change in trends
+        'highGrowth': 'Pertumbuhan Tinggi', // New for categories
+        'modalEditProfile': 'Edit Profil', // Common profile modal button
+        'modalGoToLogin': 'Ke Halaman Login', // Common login/registration modal button
+        'modalSwitch': 'Ganti', // Common switch account modal button
+        'modalCancel': 'Batal', // Common cancel button
 
         // Sidebar Menu
         'menuMain': 'Utama',
@@ -705,7 +705,7 @@ const translations = {
         'messageViewDetails': 'Lihat Detail',
         'modalComposeMessage': 'Tulis Pesan',
         'noNotifications': 'Tidak ada notifikasi baru.', // Added for clear all notifications scenario
-
+        
         // Header Dropdowns (Existing, reordered for clarity)
         'profileMyProfile': 'Profil Saya',
         'profileAccountSettings': 'Pengaturan Akun',
@@ -793,7 +793,7 @@ const translations = {
         'modalConfirmDeletionTitle': 'Konfirmasi Penghapusan',
         'modalDeleteOrderConfirm': 'Anda yakin ingin menghapus pesanan',
         'modalDelete': 'Hapus',
-
+        
         // Help Page Cards
         'cardDocumentationTitle': 'Dokumentasi',
         'cardDocumentationText': 'Akses panduan terperinci',
@@ -908,7 +908,7 @@ function setLanguage(lang) {
             // Special handling for input placeholders
             if (element.tagName === 'INPUT' && element.placeholder !== undefined) {
                 element.placeholder = translation;
-            }
+            } 
             // Special handling for select options (if their textContent is meant to be translated)
             else if (element.tagName === 'OPTION') {
                  element.textContent = translation;
@@ -1072,7 +1072,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                  this.id === 'profileToggle' ? 'profileMenu' :
                                  this.id === 'notificationsToggle' ? 'notificationsMenu' : // ADDED
                                  this.id === 'messagesToggle' ? 'messagesMenu' : null; // ADDED
-
+            
             if (targetMenuId) {
                 const targetMenu = document.getElementById(targetMenuId);
 
@@ -1095,7 +1095,7 @@ document.addEventListener('DOMContentLoaded', function() {
             event.stopPropagation(); // Prevent click from immediately closing dropdown
             const chartId = this.dataset.chartId;
             const dropdown = document.getElementById(`${chartId}Dropdown`);
-
+            
             // Close all other chart options dropdowns
             document.querySelectorAll('.chart-options-dropdown.show').forEach(openDropdown => {
                 if (openDropdown && openDropdown !== dropdown) {
@@ -1140,7 +1140,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const sidebar = document.querySelector('.sidebar');
         const appContainer = document.querySelector('.app-container');
         const toggleSidebarBtn = document.querySelector('.toggle-sidebar');
-
+        
         if (appContainer.classList.contains('sidebar-open')) {
             if (!sidebar.contains(event.target) && !toggleSidebarBtn.contains(event.target)) {
                 if (window.innerWidth <= 992) {
@@ -1156,7 +1156,7 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             const action = this.dataset.action;
             const chartId = this.closest('.chart-options-dropdown').id.replace('Dropdown', '');
-
+            
             if (action === 'view-data') {
                 alert(`${window.translations[window.currentLanguage]['chartViewData']} for ${chartId}.`);
             } else if (action === 'export-csv') {
@@ -1169,9 +1169,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle clicks within Profile Menu common actions (My Profile, Switch Account, Login/Register, Logout)
     document.querySelectorAll('#profileMenu .dropdown-item[data-action]').forEach(item => {
         item.addEventListener('click', function(event) {
-            event.preventDefault();
+            event.preventDefault(); 
             const action = this.dataset.action;
-            const modalTarget = this.dataset.modalTarget;
+            const modalTarget = this.dataset.modalTarget; 
 
             if (modalTarget) {
                 openModal(modalTarget);
@@ -1262,7 +1262,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const chartCanvas = document.getElementById(chartId);
         if (chartCanvas) {
             // Ensure chart is initialized for Chart.js
-            const chartInstance = Chart.getChart(chartCanvas);
+            const chartInstance = Chart.getChart(chartCanvas); 
             if (chartInstance) {
                 const url = chartInstance.toBase64Image();
                 const a = document.createElement('a');
